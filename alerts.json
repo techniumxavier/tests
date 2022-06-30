@@ -1,0 +1,42 @@
+{
+    "alerts":[
+
+        {
+            "query": "select count(*) from dragonball",
+            "slack_data": {
+                "url":"https://hooks.slack.com/services/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",
+                "title":"Notificação sobre a tabela foro :bell:",
+                "message":"O valor ultrapassou o limite.",
+                "bot_name":"Bot de Alerta",
+                "icon_emoji":":logo-technium:",
+                "chanel":"Warley Xavier",
+                "color":"#8250ff"
+            },
+            "alert_params":{
+                "max":true,
+                "min":false,
+                "mean":false,
+                "reference_value":10
+            }
+        },
+        {
+            "query": "select count(*) from foro",
+            "slack_data": {
+                "url":"https://hooks.slack.com/services/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",
+                "title":"Notificação sobre a tabela foro :bell:",
+                "message":"O valor não ultrapassou o limite.",
+                "bot_name":"Bot de Alerta",
+                "icon_emoji":":logo-technium:",
+                "chanel":"Warley Xavier",
+                "color":"#8250ff"
+            },
+            "alert_params":{
+                "max":false,
+                "min":true,
+                "mean":false,
+                "reference_value":10
+            }
+        }
+
+    ]
+}
